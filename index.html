@@ -1,87 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Indian Cyborgs</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0c0f1a;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #1a1f2e;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      color: #00ffc8;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #00ffc8;
-    }
-    .service {
-      margin-bottom: 40px;
-    }
-    footer {
-      background-color: #1a1f2e;
-      padding: 10px;
-      text-align: center;
-      font-size: 14px;
-      color: #aaa;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Cyborgs - Revolutionizing AI, Security & Innovation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for a more modern look (optional) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .hero-bg {
+            background-color: #1a202c; /* Dark background for hero */
+            /* You can also use a background image here */
+            /* background-image: url('your-hero-image.jpg'); */
+            /* background-size: cover; */
+            /* background-position: center; */
+        }
+        .section-title-underline {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 0.5rem; /* Space for the underline */
+        }
+        .section-title-underline::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px; /* Width of the underline */
+            height: 4px; /* Thickness of the underline */
+            background-color: #4299e1; /* Accent color (blue-500) */
+            border-radius: 2px;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Bharat Cybernatics</h1>
-    <p>Revolutionizing AI, Security & Innovation</p>
-  </header>
+<body class="bg-gray-100 text-gray-800">
 
-  <section>
-    <div class="service">
-      <h2>1. UVSS (Under Vehicle Surveillance System)</h2>
-      <p>This cutting-edge surveillance system is designed for military and high-security zones. It features AI-powered image analysis, solar/tree-powered cameras, and real-time Wi-Fi data transmission. Already deployed at the Indian Army base in Navshera, J&K, it captures under-vehicle images and number plates of incoming trucks and compares them on return to detect foreign objects or threats such as mines or hidden weapons. The system can also be customized for use at malls and government buildings.</p>
-    </div>
+    <header class="bg-gray-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-400 hover:text-blue-300 transition duration-300">Indian Cyborgs</a>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#uvss" class="hover:text-blue-400 transition duration-300">UVSS</a>
+                <a href="#behavior-detection" class="hover:text-blue-400 transition duration-300">Behavior Detection</a>
+                <a href="#stealth-camera" class="hover:text-blue-400 transition duration-300">Stealth Camera</a>
+                <a href="#data-extraction" class="hover:text-blue-400 transition duration-300">Data Extraction</a>
+                <a href="#custom-ai-ml" class="hover:text-blue-400 transition duration-300">Custom AI/ML</a>
+                <a href="#cloud-crusaders" class="hover:text-blue-400 transition duration-300">Cloud Crusaders</a>
+                <a href="#achedimics" class="hover:text-blue-400 transition duration-300">Achedimics</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-800">
+            <a href="#uvss" class="block px-6 py-3 hover:bg-gray-700 transition duration-300">UVSS</a>
+            <a href="#behavior-detection" class="block px-6 py-3 hover:bg-gray-700 transition duration-300">Behavior Detection</a>
+            <a href="#stealth-camera" class="block px-6 py-3 hover:bg-gray-700 transition duration-300">Stealth Camera</a>
+            <a href="#data-extraction" class="block px-6 py-3 hover:bg-gray-700 transition duration-300">Data Extraction</a>
+            <a href="#custom-ai-ml" class="block px-6 py-3 hover:bg-gray-700 transition duration-300">Custom AI/ML</a>
+            <a href="#cloud-crusaders" class="block px-6 py-3 hover:bg-gray-700 transition duration-300">Cloud Crusaders</a>
+            <a href="#achedimics" class="block px-6 py-3 hover:bg-gray-700 transition duration-300">Achedimics</a>
+        </div>
+    </header>
 
-    <div class="service">
-      <h2>2. AI-Powered Human Behavior Detection</h2>
-      <p>This system leverages AI to analyze real-time human activity and detect suspicious behaviors. It recognizes movements, facial expressions, and hidden weapons using intelligent algorithms. Perfect for use in airports, lounges, malls, and critical infrastructure zones. It prevents unauthorized access and potential threats with automated alerts and behavior profiling.</p>
-    </div>
+    <section class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                Indian Cyborgs
+            </h1>
+            <p class="text-xl md:text-2xl font-light text-blue-300">
+                Revolutionizing AI, Security & Innovation
+            </p>
+        </div>
+    </section>
 
-    <div class="service">
-      <h2>3. Stealth Combat Camera System</h2>
-      <p>Developed for ambush and battlefield scenarios, this miniature camera system is powered by the potential difference of water flow in tree trunks and enhanced by solar backup. These camouflaged button-sized cameras activate on motion, create a Wi-Fi mesh to relay data, and feed real-time footage to AI-powered servers that identify armed personnel or intruders. Designed for Indian Army use, it ensures stealth intelligence without human risk.</p>
-    </div>
+    <main class="container mx-auto px-6 py-12">
+        
+        <section id="uvss" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title-underline">1. UVSS – Under Vehicle Surveillance System</h2>
+            <div class="md:flex md:items-start md:space-x-8 bg-white p-8 rounded-lg shadow-xl">
+                <div class="md:w-2/3">
+                    <p class="text-lg leading-relaxed mb-4">
+                        A state-of-the-art surveillance system engineered for military and high-security environments. Featuring AI-powered image analysis, eco-powered (solar/tree energy) cameras, and real-time Wi-Fi data transmission.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Successfully deployed at the Indian Army base in Nowshera, J&K, it captures under-vehicle images and license plates of incoming trucks, comparing return scans to detect hidden weapons or foreign objects like mines. Easily customizable for malls, government buildings, and other high-traffic facilities.
+                    </p>
+                </div>
+                <div class="md:w-1/3 mt-6 md:mt-0">
+                    <img src="https://placehold.co/600x400/1E90FF/FFFFFF?text=UVSS+Technology&font=inter" alt="Under Vehicle Surveillance System" class="rounded-lg shadow-md w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
 
-    <div class="service">
-      <h2>4. Smart Data Extraction Systems</h2>
-      <p>AI models extract structured data from documents (PDF, DOC, XML, CSV, Excel) and images using OCR and AI. Runs entirely on standalone Linux servers, removing cloud dependency and ensuring data privacy. Ideal for banks, legal firms, logistics, and healthcare sectors. Fully customizable for domain-specific data formats and workflows.</p>
-    </div>
+        <section id="behavior-detection" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title-underline">2. AI-Powered Human Behavior Detection</h2>
+            <div class="md:flex md:items-start md:space-x-8 bg-white p-8 rounded-lg shadow-xl">
+                <div class="md:w-1/3 order-last md:order-first mt-6 md:mt-0">
+                     <img src="https://placehold.co/600x400/32CD32/FFFFFF?text=AI+Behavior+Analysis&font=inter" alt="AI Human Behavior Detection" class="rounded-lg shadow-md w-full h-auto object-cover">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-lg leading-relaxed">
+                        A real-time AI system that analyzes human behavior to flag suspicious activity. It uses intelligent algorithms to track movements, facial expressions, and concealed weapons. Perfect for deployment in airports, malls, lounges, and critical infrastructure zones—automatically raising alerts to prevent unauthorized access and potential threats.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <div class="service">
-      <h2>5. Customized AI/ML Models</h2>
-      <p>Our AI/ML models are deployed on-premises using Linux-based Docker images. They offer automated data extraction, report generation, receipt creation, and live chatbot services. The system is hackproof with no open ports, encrypted using quantum cryptography, and integrated with biometric multi-factor authentication. Designed for secure sectors like defense and banking, where access requires biometrics from multiple high-authority personnel for verification.</p>
-    </div>
+        <section id="stealth-camera" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title-underline">3. Stealth Combat Camera System</h2>
+            <div class="md:flex md:items-start md:space-x-8 bg-white p-8 rounded-lg shadow-xl">
+                <div class="md:w-2/3">
+                    <p class="text-lg leading-relaxed">
+                        Designed for battlefield and ambush scenarios, these camouflaged button-sized cameras are powered by the natural voltage difference in tree trunks, supported by solar backup. They activate on motion, form a Wi-Fi mesh for secure data relay, and stream footage to AI servers that identify intruders or armed personnel. Built for the Indian Army, it ensures covert surveillance without risking human lives.
+                    </p>
+                </div>
+                <div class="md:w-1/3 mt-6 md:mt-0">
+                    <img src="https://placehold.co/600x400/2F4F4F/FFFFFF?text=Stealth+Cameras&font=inter" alt="Stealth Combat Camera System" class="rounded-lg shadow-md w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
 
-    <div class="service">
-      <h2>6. Cloud Crusaders - Sci-Fi Learning Platform</h2>
-      <p>Learn cloud computing like never before with our comic-based educational series. 'Cloud Crusaders' personifies AWS, Google Cloud, Azure, and Oracle Cloud as superhero characters like DynamoDB, BigQuery, and EC2. Each issue explores real-world tech battles and concepts in an engaging, story-driven format, perfect for learners of all ages.</p>
-    </div>
-  </section>
+        <section id="data-extraction" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title-underline">4. Smart Data Extraction Systems</h2>
+            <div class="md:flex md:items-start md:space-x-8 bg-white p-8 rounded-lg shadow-xl">
+                 <div class="md:w-1/3 order-last md:order-first mt-6 md:mt-0">
+                    <img src="https://placehold.co/600x400/FFA500/FFFFFF?text=Data+Extraction&font=inter" alt="Smart Data Extraction Systems" class="rounded-lg shadow-md w-full h-auto object-cover">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-lg leading-relaxed">
+                        Extract structured data from PDFs, DOCs, XML, CSVs, Excel sheets, and images using advanced OCR and AI models. Hosted entirely on secure, standalone Linux servers—eliminating cloud reliance and preserving data confidentiality. Ideal for banks, legal services, logistics, and healthcare sectors. Fully customizable for domain-specific formats and workflows.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    &copy; 2025 Indian Cyborgs. All rights reserved.
-  </footer>
+        <section id="custom-ai-ml" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title-underline">5. Customized On-Prem AI/ML Models</h2>
+            <div class="md:flex md:items-start md:space-x-8 bg-white p-8 rounded-lg shadow-xl">
+                <div class="md:w-2/3">
+                    <p class="text-lg leading-relaxed">
+                        Deploy AI/ML models via Linux-based Docker containers for tasks like automated data extraction, report generation, receipt creation, and intelligent chatbots. Designed with enterprise-grade security—quantum encryption, no open ports, and biometric multi-factor authentication. Suitable for sensitive sectors like defense and finance, where access control is mission-critical and validated by multiple high-authority users.
+                    </p>
+                </div>
+                <div class="md:w-1/3 mt-6 md:mt-0">
+                    <img src="https://placehold.co/600x400/8A2BE2/FFFFFF?text=On-Prem+AI/ML&font=inter" alt="Customized On-Prem AI/ML Models" class="rounded-lg shadow-md w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section id="cloud-crusaders" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title-underline">6. Cloud Crusaders – Sci-Fi Learning Meets Technology</h2>
+            <div class="md:flex md:items-start md:space-x-8 bg-white p-8 rounded-lg shadow-xl">
+                <div class="md:w-1/3 order-last md:order-first mt-6 md:mt-0">
+                    <img src="https://placehold.co/600x400/FF69B4/FFFFFF?text=Cloud+Crusaders+Comic&font=inter" alt="Cloud Crusaders Comic Series" class="rounded-lg shadow-md w-full h-auto object-cover">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-lg leading-relaxed">
+                        Discover cloud computing through storytelling with our unique comic series. Cloud Crusaders brings AWS, Google Cloud, Azure, and Oracle Cloud to life through superhero avatars like EC2, DynamoDB, and BigQuery. Each issue blends real-world cloud concepts with thrilling tech battles—making it the ultimate learning experience for students, techies, and curious minds of all ages.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="achedimics" class="mb-16 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title-underline">7. Achedimics Learning – Fast-Track Courses</h2>
+            <div class="md:flex md:items-start md:space-x-8 bg-white p-8 rounded-lg shadow-xl">
+                <div class="md:w-2/3">
+                    <p class="text-lg leading-relaxed mb-2">Fast-Track Courses for Students (Class 5 to 10):</p>
+                    <ul class="list-disc list-inside text-lg leading-relaxed space-y-1 mb-4">
+                        <li>Complete Math Curriculum in Just 20 Pages per Grade</li>
+                        <li>Easy Tricks to Remember Formulas</li>
+                        <li>Science Explained with Movie Scenes – From Class 5 to 10</li>
+                    </ul>
+                    <p class="text-lg leading-relaxed">
+                        Fun, simplified, and visual learning to help young minds grasp concepts faster and better.
+                    </p>
+                </div>
+                <div class="md:w-1/3 mt-6 md:mt-0">
+                     <img src="https://placehold.co/600x400/00CED1/FFFFFF?text=Achedimics+Learning&font=inter" alt="Achedimics Learning" class="rounded-lg shadow-md w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="currentYear"></span> Indian Cyborgs. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Revolutionizing AI, Security & Innovation.</p>
+            </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
 </body>
 </html>
-
